@@ -1,5 +1,31 @@
 ---
-title: "resume"
+title: "Resume"
 output: html_document
 ---
+
+# Yasmine Evang
+New York, NY • yasminearmelle1@gmail.com • github.com/yasminevang • linkedin.com/in/yasminevang
+
+## Education
+**Candidate: Master of Science (MS), Biostatistics, Columbia University Mailman School of Public Health** — New York, NY *(May 2027)*  
+
+**Bachelor of Arts (BA), Psychology, Franklin University Switzerland** — Lugano, Switzerland *(December 2024)*  
+
+
+## Experience
+**Youth Care Associate - VQ** *(Jan 2025 – Sep 2025)*  
+- Providing care, guidance, and support to a diverse range of adolescents in a residential community,
+focusing on their overall well-being and daily operation
+
+**Senior Program Counselor — School of the New York Times** *(May 2024 – Aug 2024)*  
+- Designed inclusive programming to support students from various cultural and socioeconomic
+backgrounds
+
+## Skills
+Languages: French, Spanish, English, Italian
+Tools: R, Tableau, Microsoft Office, …  
+
+## Projects (optional)
+**Digital Storytelling** — I write a blog.  | https://yasminevang.substack.com/
+
 
