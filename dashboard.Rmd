@@ -8,6 +8,11 @@ output:
 runtime: static
 ---
 
+```{r echo = FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+
 ```{r}
 library(tidyverse)
 library(p8105.datasets)
@@ -16,7 +21,6 @@ library(plotly)
 ```
 
 
-Clean data/ select items for charts
 ```{r}
 data("instacart")
 
@@ -26,8 +30,8 @@ icart = instacart |>
 
 
 ## Top 10 Departments
-Bar graph
-```{r}
+
+```{r Bar graph}
 department_counts = icart |> 
   count(department, name = "items" , sort = TRUE) |>
   slice_head(n = 10)
@@ -46,8 +50,8 @@ layout(
 ```
 
 ## Items per Hour
-Line graph: 
-```{r}
+ 
+```{r Line graph}
 items_by_hour = icart |> 
   count(order_hour_of_day, name = "items")
 
@@ -65,8 +69,8 @@ layout(
 ```
 
 ## Typical Order Hour by Day
-Box plot
-```{r}
+
+```{r Box plot}
 dow_labs = c("Sun","Mon","Tue","Wed","Thu","Fri","Sat")
 box_df = icart |>
 transmute(
