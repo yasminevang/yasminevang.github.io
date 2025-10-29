@@ -13,8 +13,10 @@ navbar:
       href: "mailto:yasminearmelle@gmail.com"
     - text: "LinkedIn"
       href: "https://www.linkedin.com/in/yasminevang/"
+    - text: "Blog on Substack"
+      href: "https://yasminevang.substack.com/"
 output:
   html_document:
-    theme: cerulean
+    theme: cosmo
     toc: false
     highlight: textmate
