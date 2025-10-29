@@ -4,8 +4,10 @@ output_dir: "."
 navbar:
   title: "Home"
   left:
-    - text: "resume"
+    - text: "Resume"
       href: resume.html
+    - text: "Instacart Dashboard"
+      href:  dashboard.html
   right:
     - text: "GitHub"
       href: "https://github.com/yasminevang"
@@ -15,8 +17,9 @@ navbar:
       href: "https://www.linkedin.com/in/yasminevang/"
     - text: "Blog on Substack"
       href: "https://yasminevang.substack.com/"
+
 output:
   html_document:
-    theme: cosmo
+    theme: cerulean
     toc: false
     highlight: textmate
