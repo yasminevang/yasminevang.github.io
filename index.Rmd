@@ -1,0 +1,20 @@
+---
+title: "Welcome to my website"
+output: 
+  html_document:
+    toc: true
+    toc_float: true
+    theme: cerulean
+---
+
+# Hello, I'm Yasmine
+
+Surprise! I am actually not a native New Yorker although I definitely think I look like I fit in. If you've noticed I say "y'all"... then pretend you don't. I am studying Biostatistics at Columbia, and I hope to go into psychiatric clinical trial work.
+
+## Recent Updates
+- I am dressing up as a French person for Halloween
+- The Louvre robbery was an inside job. Had to be. 
+
+## Contact
+The best way to reach me is by **email** or on **LinkedIn** 
+
