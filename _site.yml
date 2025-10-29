@@ -1,0 +1,20 @@
+name: "Yasmine Evang"
+title: "Yasmine Evang"
+output_dir: "."
+navbar:
+  title: "Home"
+  left:
+    - text: "resume"
+      href: resume.html
+  right:
+    - text: "GitHub"
+      href: "https://github.com/yasminevang"
+    - text: "Email"
+      href: "mailto:yasminearmelle@gmail.com"
+    - text: "LinkedIn"
+      href: "https://www.linkedin.com/in/yasminevang/"
+output:
+  html_document:
+    theme: cerulean
+    toc: false
+    highlight: textmate
