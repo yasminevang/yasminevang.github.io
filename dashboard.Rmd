@@ -1,0 +1,104 @@
+---
+title: "Instacart — Flexdashboard"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    vertical_layout: fill
+    theme: cerulean
+runtime: static
+---
+
+```{r}
+library(tidyverse)
+library(p8105.datasets)
+
+library(plotly)
+```
+
+
+Clean data/ select items for charts
+```{r}
+data("instacart")
+
+icart = instacart |> 
+  select(order_id, order_hour_of_day, order_dow, add_to_cart_order, aisle, department)
+```
+
+
+## Top 10 Departments
+Bar graph
+```{r}
+department_counts = icart |> 
+  count(department, name = "items" , sort = TRUE) |>
+  slice_head(n = 10)
+
+
+plot_ly(department_counts,
+        x = ~ items, 
+        y = ~ reorder(department, items),
+        type = "bar"
+) |>
+layout(
+  xaxis = list(title = "Items"),
+  yaxis = list(title = "Department")
+)
+
+```
+
+## Items per Hour
+Line graph: 
+```{r}
+items_by_hour = icart |> 
+  count(order_hour_of_day, name = "items")
+
+
+plot_ly(items_by_hour,
+        x = ~ order_hour_of_day, 
+        y = ~ items,
+        type = "scatter",
+        mode = "lines+markers"
+) |>
+layout(
+  xaxis = list(title = "Order Hour (0–23)"),
+  yaxis = list(title = "Items")
+)
+```
+
+## Typical Order Hour by Day
+Box plot
+```{r}
+dow_labs = c("Sun","Mon","Tue","Wed","Thu","Fri","Sat")
+box_df = icart |>
+transmute(
+order_dow = factor(order_dow, levels = 0:6, labels = dow_labs),
+order_hour_of_day
+) |>
+drop_na(order_hour_of_day)
+
+```
+
+```{r}
+plot_ly(box_df,
+        x = ~ order_dow, 
+        y = ~ order_hour_of_day,
+        type = "box"
+) |>
+layout(
+  xaxis = list(title = "Day of Week"),
+  yaxis = list(title = "Order Hour (0–23)")
+)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
